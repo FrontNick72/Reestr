@@ -1,55 +1,68 @@
 extends include/template
 
 block title
-  title Reestr
+  title registry
 block description
-  +description('Reestr')
+  +description('registry')
 block keywords
-  +keywords('Reestr, some, keywords')
+  +keywords('registry, some, keywords')
 
 block css
   // build:css vendor.min.css
 
-  +styles('css/font')
+
   // endbuild
   // build:css main.min.css
   +styles('css/main.css')
   +styles('css/font-awesome.css')
+  +styles('css/fonts.css')
   // endbuild
 
 block content
   .container
-    <ul class="breadcrumbs breadcrumbs_main">
-      <li class="breadcrumbs__item">
-        <a href="/" class = "breadcrumbs__link">Главная</a>
-      </li>
-      <li class="breadcrumbs__item breadcrumbs__item_last breadcrumbs__item_here">
-        <a href="/" class = "breadcrumbs__link">Реестры</a>
-      </li>
-    </ul>
+    +breadcrumbs('Главная', 'Реестры')(class = "breadcrumbs_main")
 
-    section.reestr
-      h1.title.reestr__title Реестры
+    section.registry
+      h1.title.registry__title Реестры
       article.article
-        .article__text
-        a.reestr__link(href="#") Подробнее
-          <i class="fa fa-long-arrow-right fa-1x" aria-hidden="true"></i>
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
       article.article
-        .article__text
-        a.reestr__link(href="#") Подробнее
-          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
       article.article
-        .article__text
-        a.reestr__link(href="#") Подробнее
-          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
       article.article
-        .article__text
-        a.reestr__link(href="#") Подробнее
-          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
       article.article
-        .article__text
-        a.reestr__link(href="#") Подробнее
-          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
+
+    .sidebar
+      .menu
+        a.menu__item.menu__item_one(href="#")
+          .menu__icon.menu__icon_reward
+          .menu__title Конкурсы
+        a.menu__item.menu__item_two(href="#")
+          .icon
+          .menu__title Закупки
+        a.menu__item.menu__item_one(href="#")
+          .icon
+          .menu__title Результаты проверок
+        a.menu__item.menu__item_two(href="#")
+          .icon
+          .menu__title Открытые данные
+        a.menu__item.menu__item_one(href="#")
+          .icon
+          .menu__title Услуги
+        a.menu__item.menu__item_two(href="#")
+          .icon
+          .menu__title Обращение граждан
+
+    .clr
+
 
 
 block scripts
