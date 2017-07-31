@@ -65,9 +65,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__stylus_main_styl__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__stylus_main_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__stylus_main_styl__);
+
 
 console.log('in index.js')
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: C:\\projects\\Reestr\\source\\stylus\\main.styl Unexpected character '@' (1:0)\nYou may need an appropriate loader to handle this file type.\n| @import 'include/mixins.styl'\n| \n| // Normalize");
 
 /***/ })
 /******/ ]);
