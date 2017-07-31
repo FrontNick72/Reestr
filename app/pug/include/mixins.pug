@@ -25,6 +25,12 @@ mixin breadcrumbs(...names)
 			li.breadcrumbs__item
 				a(href="#").breadcrumbs__link=name
 
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/svg/symbol/sprite.svg#" + name)
+
 mixin content(h, head, ...p)
 	if h
 		#{h}=head

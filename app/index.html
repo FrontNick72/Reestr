@@ -10,8 +10,10 @@
     <!-- endbuild-->
     <!-- build:css main.min.css-->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/slick-theme.min.css">
+    <link rel="stylesheet" href="css/slick.min.css">
     <!-- endbuild-->
   </head>
   <body>
@@ -39,27 +41,57 @@
         </article>
       </section>
       <div class="sidebar">
-        <div class="menu"><a class="menu__item menu__item_one" href="#">
-            <div class="menu__icon menu__icon_reward"></div>
-            <div class="menu__title">Конкурсы</div></a><a class="menu__item menu__item_two" href="#">
-            <div class="icon"></div>
-            <div class="menu__title">Закупки</div></a><a class="menu__item menu__item_one" href="#">
-            <div class="icon"></div>
-            <div class="menu__title">Результаты проверок</div></a><a class="menu__item menu__item_two" href="#">
-            <div class="icon"></div>
-            <div class="menu__title">Открытые данные</div></a><a class="menu__item menu__item_one" href="#">
-            <div class="icon"></div>
-            <div class="menu__title">Услуги</div></a><a class="menu__item menu__item_two" href="#">
-            <div class="icon"></div>
-            <div class="menu__title">Обращение граждан</div></a></div>
+        <div class="menu"><a class="menu__item" href="#">
+            <svg class="icon icon-badge ">
+              <use xlink:href="img/svg/symbol/sprite.svg#badge"></use>
+            </svg>
+            <div class="menu__title">Конкурсы</div></a><a class="menu__item" href="#">
+            <svg class="icon icon-coins ">
+              <use xlink:href="img/svg/symbol/sprite.svg#coins"></use>
+            </svg>
+            <div class="menu__title">Конкурсы</div></a><a class="menu__item" href="#">
+            <svg class="icon icon-check ">
+              <use xlink:href="img/svg/symbol/sprite.svg#check"></use>
+            </svg>
+            <div class="menu__title">Конкурсы</div></a><a class="menu__item" href="#">
+            <svg class="icon icon-man ">
+              <use xlink:href="img/svg/symbol/sprite.svg#man"></use>
+            </svg>
+            <div class="menu__title">Конкурсы</div></a><a class="menu__item" href="#">
+            <svg class="icon icon-list ">
+              <use xlink:href="img/svg/symbol/sprite.svg#list"></use>
+            </svg>
+            <div class="menu__title">Конкурсы</div></a><a class="menu__item" href="#">
+            <svg class="icon icon-communication ">
+              <use xlink:href="img/svg/symbol/sprite.svg#communication"></use>
+            </svg>
+            <div class="menu__title">Конкурсы</div></a></div>
+        <div class="institutes">
+          <div class="institutes__title">Подведомственные учреждения</div><a class="institutes__item" href="#"><img class="institutes__logo" src="img/general/technopark.png"><span class="institutes__name">Технопарк "Ямал"</span></a><a class="institutes__item" href="#"><img class="institutes__logo" src="img/general/centr.png"><span class="institutes__name">Центр реабилитации</span></a><a class="institutes__item" href="#"><img class="institutes__logo" src="img/general/Arctica.png"><span class="institutes__name">Центр изучения арктики</span></a>
+          <div class="clr"></div>
+        </div>
       </div>
       <div class="clr"></div>
+      <div class="gosportals">
+        <div class="header">
+          <div class="gosportals__title">Государственные порталы</div>
+          <div class="clr"></div>
+        </div>
+        <div class="slider"><a class="slider__item" href="#"><img class="slider__img" src="img/general/russia.png">
+            <div class="slider__name">Президент России</div></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/russia_yellow.png">
+            <div class="slider__name">Правительство РФ</div></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/russia_blue.png">
+            <div class="slider__name">Работа в России</div></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/gos-uslugi.png"></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/nacreeest.png">
+            <div class="slider__name">Национальный Реестр</div></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/open-region.png">
+            <div class="slider__name">Открытый Регион</div></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/yamao.png">
+            <div class="slider__name">ЯМАО</div></a><a class="slider__item" href="#"><img class="slider__img" src="img/general/russia.png">
+            <div class="slider__name">Президент России</div></a></div>
+      </div>
     </div>
     <!--build:js vendor.min.js-->
-    <script src=""></script>
     <!-- endbuild-->
     <!--build:js main.min.js-->
-    <script src="js/main.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/scripts.js"></script>
     <!-- endbuild-->
   </body>
 </html>

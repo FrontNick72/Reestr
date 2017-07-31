@@ -11,6 +11,10 @@ var gulp       = require('gulp'), // Подключаем Gulp
   pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
   cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
   fontmin = require('gulp-fontmin'), //TTF to EOT, OTF, WOFF, SVG + Font-face
+  svgmin = require('gulp-svgmin'),
+  cheerio = require('gulp-cheerio'),
+  replace = require('gulp-replace'),
+  svgSprite = require('gulp-svg-sprite'),
   autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 
@@ -62,28 +66,57 @@ gulp.task('fonts', ['fface'], function(){
 
 gulp.task('scripts', function() {
   return gulp.src([ // Берем все необходимые библиотеки
-    'app/libs/jquery/dist/jquery.min.js',
-    'app/libs/slick/slick.js',
+    'app/libs/jquery/dist/jquery.js',
+    'app/libs/slick.js',
+    'app/libs/tabs.js',
     'app/libs/tabs.js',
     'app/libs/video.js'
     ])
     .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-    .pipe(uglify()) // Сжимаем JS файл
+    .pipe(uglify())
     .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('css-libs', ['stylus'], function() {
-  return gulp.src(['app/css/slick.css', 'app/css/slick-theme.css']) // Выбираем файл для минификации
+  return gulp.src(['app/css/slick.css', 'app/css/slick-theme.css', 'app/css/font-awesome.css']) // Выбираем файл для минификации
     .pipe(cssnano()) // Сжимаем
     .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
     .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
+gulp.task('svg', function() {
+  return gulp.src('app/img/svg/*.svg')
+      .pipe(svgmin({
+        js2svg: {
+            pretty: true
+        }
+      }))
+      .pipe(cheerio({
+        run: function($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+        },
+        parserOptions: { xmlMode: true }
+      }))
+      .pipe(replace('&gt;', '>'))
+      .pipe(svgSprite({
+          mode: {
+              symbol: {
+                  sprite: "sprite.svg"
+              }
+          }
+      }))
+      .pipe(gulp.dest('app/img/svg/'));
+});
+
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
   gulp.watch('app/stylus/**/*.styl', ['stylus']); // Наблюдение за stylus файлами в папке stylus
   gulp.watch('app/pug/**/*.pug', ['pug']);
+  gulp.watch('app/img/svg/*.svg', ['svg']);
   gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
   gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
+  gulp.watch('app/img/general/**/*.{png,jpg,gif}');
 });
 
 gulp.task('clean', function() {
@@ -101,12 +134,16 @@ gulp.task('img', function() {
     .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-gulp.task('build', ['clean', 'img', 'stylus', 'scripts'], function() {
+
+
+gulp.task('build', ['clean', 'svg', 'pug',  'img', 'stylus', 'scripts'], function() {
 
   var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-    'app/css/style.css',
+    'app/css/main.css',
+    'app/css/fonts.css',
     'app/css/slick.min.css',
-    'app/css/slick-theme.css'
+    'app/css/slick-theme.min.css',
+    'app/css/font-awesome.min.css'
     ])
   .pipe(gulp.dest('dist/css'))
 

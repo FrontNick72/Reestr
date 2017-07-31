@@ -14,8 +14,10 @@ block css
   // endbuild
   // build:css main.min.css
   +styles('css/main.css')
-  +styles('css/font-awesome.css')
+  +styles('css/font-awesome.min.css')
   +styles('css/fonts.css')
+  +styles('css/slick-theme.min.css')
+  +styles('css/slick.min.css')
   // endbuild
 
 block content
@@ -42,33 +44,74 @@ block content
 
     .sidebar
       .menu
-        a.menu__item.menu__item_one(href="#")
-          .menu__icon.menu__icon_reward
+        a(href="#").menu__item
+          +icon('badge')
           .menu__title Конкурсы
-        a.menu__item.menu__item_two(href="#")
-          .icon
-          .menu__title Закупки
-        a.menu__item.menu__item_one(href="#")
-          .icon
-          .menu__title Результаты проверок
-        a.menu__item.menu__item_two(href="#")
-          .icon
-          .menu__title Открытые данные
-        a.menu__item.menu__item_one(href="#")
-          .icon
-          .menu__title Услуги
-        a.menu__item.menu__item_two(href="#")
-          .icon
-          .menu__title Обращение граждан
-
+        a(href="#").menu__item
+          +icon('coins')
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          +icon('check')
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          +icon('man')
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          +icon('list')
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          +icon('communication')
+          .menu__title Конкурсы
+      .institutes
+        .institutes__title Подведомственные учреждения
+        a(href="#").institutes__item
+          img.institutes__logo(src = "img/general/technopark.png")
+          span.institutes__name Технопарк "Ямал"
+        a(href="#").institutes__item
+          img.institutes__logo(src = "img/general/centr.png")
+          span.institutes__name Центр реабилитации
+        a(href="#").institutes__item
+          img.institutes__logo(src = "img/general/Arctica.png")
+          span.institutes__name Центр изучения арктики
+        .clr
     .clr
+    .gosportals
+      .header
+        .gosportals__title Государственные порталы
+        .clr
+      .slider
+        a(href="#").slider__item
+          img(src="img/general/russia.png").slider__img
+          .slider__name Президент России
+        a(href="#").slider__item
+          img(src="img/general/russia_yellow.png").slider__img
+          .slider__name Правительство РФ
+        a(href="#").slider__item
+          img(src="img/general/russia_blue.png").slider__img
+          .slider__name Работа в России
+        a(href="#").slider__item
+          img(src="img/general/gos-uslugi.png").slider__img
+        a(href="#").slider__item
+          img(src="img/general/nacreeest.png").slider__img
+          .slider__name Национальный Реестр
+        a(href="#").slider__item
+          img(src="img/general/open-region.png").slider__img
+          .slider__name Открытый Регион
+        a(href="#").slider__item
+          img(src="img/general/yamao.png").slider__img
+          .slider__name ЯМАО
+        a(href="#").slider__item
+          img(src="img/general/russia.png").slider__img
+          .slider__name Президент России
 
 
 
 block scripts
   //build:js vendor.min.js
-  +scripts('')
+
   // endbuild
   //build:js main.min.js
-  +scripts('js/main.js')
+
+  +scripts('js/libs.min.js')
+  +scripts('js/scripts.js')
   // endbuild
