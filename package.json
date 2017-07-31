@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "serv": "static build"
   },
   "author": "FrontNick72",
@@ -33,7 +34,8 @@
     "imagemin-pngquant": "^5.0.1",
     "node-static": "^0.7.9",
     "pug-loader": "^2.3.0",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
     "normalize-styl": "^4.1.1"

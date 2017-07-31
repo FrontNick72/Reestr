@@ -6,13 +6,17 @@ const PATHS = {
   build: path.join(__dirname, 'build')
 };
 module.exports = {
-  entry: PATHS.source + '/index.js',
+  entry: {
+    'index': PATHS.source + '/pug/index.js'
+  },
   output: {
       path: PATHS.build,
       filename: '[name].js'
   },
   plugins: [
     new HTMLWebpackPlugin({
+      filename: 'index.html',
+      chunks: ['index'],
       template: PATHS.source + '/pug/index.pug'
     })
   ],
