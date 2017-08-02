@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../fonts/RobotoBold.eot"); /* IE9 */
+    src: url("../fonts/RobotoBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/RobotoBold.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/RobotoBold.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/RobotoBold.svg#Roboto") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("../fonts/RobotoMedium.eot"); /* IE9 */
+    src: url("../fonts/RobotoMedium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/RobotoMedium.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/RobotoMedium.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/RobotoMedium.svg#Roboto Medium") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/RobotoRegular.eot"); /* IE9 */
+    src: url("../fonts/RobotoRegular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/RobotoRegular.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/RobotoRegular.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/RobotoRegular.svg#Roboto") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: "RobotoSlab";
+    src: url("../fonts/RobotoSlab-Regular.eot"); /* IE9 */
+    src: url("../fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/RobotoSlab-Regular.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/RobotoSlab-Regular.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/RobotoSlab-Regular.svg#Roboto Slab") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: "RobotoSlabBold";
+    src: url("../fonts/RobotoSlabBold.eot"); /* IE9 */
+    src: url("../fonts/RobotoSlabBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/RobotoSlabBold.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/RobotoSlabBold.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../fonts/RobotoSlabBold.svg#Roboto Slab") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
