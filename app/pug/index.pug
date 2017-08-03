@@ -8,17 +8,11 @@ block keywords
   +keywords('registry, some, keywords')
 
 block css
-  // build:css vendor.min.css
-
-
-  // endbuild
-  // build:css main.min.css
   +styles('css/main.css')
   +styles('css/font-awesome.min.css')
   +styles('css/fonts.css')
   +styles('css/slick-theme.min.css')
   +styles('css/slick.min.css')
-  // endbuild
 
 block content
   .container
@@ -110,14 +104,6 @@ block content
           img(src="img/general/russia.png").slider__img
           .slider__name Президент России
 
-
-
 block scripts
-  //build:js vendor.min.js
-
-  // endbuild
-  //build:js main.min.js
-
   +scripts('js/libs.min.js')
   +scripts('js/scripts.js')
-  // endbuild
