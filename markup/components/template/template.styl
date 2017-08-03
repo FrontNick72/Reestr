@@ -1,0 +1,248 @@
+// Global styles
+.container
+  width 1170px
+  margin 0 auto
+// Global styles end
+body
+  background #f7f6f8
+  font-family Roboto
+
+.clr
+  clear both
+
+// Head styles
+
+
+// Head styles End
+
+// Info styles
+//Хлебные крошки
+.breadcrumbs
+  list-style none
+  padding 0
+  &__item
+    display inline
+    &:after
+      content "•"
+      color #999999
+      font-size 15px
+      font-weight 400
+      line-height 18px
+      margin 13px
+      position relative
+      bottom -1px
+      left 2px
+    &:last-child
+      &:after
+        display none
+  &__link
+    color #6e6e6e
+    font-size 13px
+    font-weight 400
+    line-height 18px
+    text-decoration none
+
+.breadcrumbs_main
+  margin 31px 0 0 0
+
+//Блок с реестрами
+.registry
+  float left
+  width 770px
+  .title
+    font-family RobotoSlab
+    font-weight 700
+    font-set(32px, rgba(55, 55, 55, 0.99))
+  &__title
+    margin 42px 0 30px 0
+  .article
+    background #fff
+    padding 30px
+    margin-bottom 20px
+  &__text
+    font-family RobotoSlab
+    font-set(18px, #333333)
+    margin-bottom 21px
+  &__link
+    font-weight 700
+    font-set(13px, #999)
+    line-height 18px
+    text-transform uppercase
+    text-decoration none
+    &:hover
+      color #444
+      .fa
+        color #444
+
+    .fa
+      color #bba162
+      font-size 16px
+      font-weight 400
+      line-height 18px
+      margin-left 8px
+
+
+
+
+//sidebar
+.sidebar
+  float right
+  width 372px
+
+//Блок меню
+.menu
+  display flex
+  flex-wrap wrap
+  justify-content space-around
+  width 100%
+  &__item
+    background-color #355aa8
+    display block
+    margin 0 2px 2px 0
+    text-align center
+    text-decoration none
+    height 166px
+    width 184px
+    &:nth-child(odd)
+      background-image url('%=static=%general/down.png')
+      background-repeat no-repeat
+      background-size cover
+      background-position-x -30px
+      &:hover
+        background-image none
+    &:nth-child(even)
+      background-image url('%=static=%general/up.png')
+      background-repeat no-repeat
+      background-size cover
+      background-position-x -30px
+      &:hover
+        background-image none
+    .icon
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 18px;
+      svg
+        fill #fff
+    .menu__title
+      font-family RobotoSlab
+      font-weight 700
+      color #fff
+      font-size 15.98px
+      line-height 18px
+      transform scaleY(1.0014)
+
+//Блок институты
+.institutes
+  background #fff
+  margin-top 31px
+  width 100%
+  &__title
+    border-bottom 1px solid #eeedee
+    font-family RobotoSlab
+    font-weight 700
+    color #333
+    font-size: 18px
+    line-height 66px
+    text-align center
+    width 100%
+  &__item
+    display flex
+    float left
+    box-sizing border-box
+    margin 7px 0
+    height 113px
+    justify-content center
+    text-decoration none
+    align-items center
+    width 50%
+    &:hover
+      .institutes__name
+        color #000
+    &:nth-child(2)
+      border-right 1px solid #eeedee
+      padding 0 23px 0 15px
+      .institutes__name
+        padding-left 8px
+    &:nth-child(3)
+      border-right 1px solid #eeedee
+      padding 0 21px 0 23px
+      .institutes__name
+        padding-left 16px
+    &:nth-child(4)
+      border-top 1px solid #eeedee
+      margin 0
+      width 100%
+      .institutes__name
+        padding-left 23px
+  &__logo
+    float left
+  &__name
+    float left
+    color #333
+    font-size 13px
+    font-weight 500
+    line-height 16px
+    transform scaleX(1.0007)
+
+//Порталы
+.gosportals
+  background #fff
+  margin 90px 0 47px 0
+  .header
+    padding 24px
+    border-bottom 1px solid #eeedee
+    .gosportals__title
+      float left
+      font-family RobotoSlab
+      font-weight 700
+      color #333
+      font-size 18px
+      line-height 26px
+      text-align left
+  .slider
+    padding 29px 0 31px 38px
+    &__item
+      display inline-block
+      text-align center
+      text-decoration none
+      &:hover
+        .slider__img
+          margin-top 19px
+          margin-bottom 0
+        .slider__name
+          display none
+    &__img
+      margin 0 auto
+      margin-bottom 19px
+    &__name
+      font-weight 500
+      color #333
+      font-size 13px
+      line-height 16px
+      transform scaleX(1.0007)
+    &__prev,
+    &__next
+      border 1px solid #dedede
+      border-radius 3px
+      cursor pointer
+      position: absolute;
+      top -65px
+      right 8px
+      text-align center
+      height 49px
+      width 49px
+      .fa
+        color #bba162;
+        font-size 2.45rem
+        line-height 49px
+    &__prev
+      right 61px
+
+
+
+// Tarif styles End
+
+// Footer styles
+
+// Footer styles End
+

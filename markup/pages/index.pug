@@ -1,0 +1,109 @@
+extends ../components/template/template
+
+block title
+  title registry
+block description
+  +description('registry')
+block keywords
+  +keywords('registry, some, keywords')
+
+block css
+  |<!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
+  |<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
+  |<!--[if (gt IE 9)|!(IE)]><!--><link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+
+
+block content
+  .container
+    +breadcrumbs('Главная', 'Реестры')(class = "breadcrumbs_main")
+
+    section.registry
+      h1.title.registry__title Реестры
+      article.article
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
+      article.article
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
+      article.article
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
+      article.article
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
+      article.article
+        .registry__text Реестр объектов инновационной инфраструктуры Ямало-Ненецкого автономного округа
+        a.registry__link(href="#") Подробнее #[i.fa.fa-long-arrow-right]
+
+    .sidebar
+      .menu
+        a(href="#").menu__item
+          .icon
+            include ../static/img/svg/coins.svg
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          .icon
+            include ../static/img/svg/coins.svg
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          .icon
+            include ../static/img/svg/check.svg
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          .icon
+            include ../static/img/svg/man.svg
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          .icon
+            include ../static/img/svg/list.svg
+          .menu__title Конкурсы
+        a(href="#").menu__item
+          .icon
+            include ../static/img/svg/communication.svg
+          .menu__title Конкурсы
+      .institutes
+        .institutes__title Подведомственные учреждения
+        a(href="#").institutes__item
+          img.institutes__logo(src = "%=static=%img/general/technopark.png")
+          span.institutes__name Технопарк "Ямал"
+        a(href="#").institutes__item
+          img.institutes__logo(src = "%=static=%img/general/centr.png")
+          span.institutes__name Центр реабилитации
+        a(href="#").institutes__item
+          img.institutes__logo(src = "%=static=%img/general/Arctica.png")
+          span.institutes__name Центр изучения арктики
+        .clr
+    .clr
+    .gosportals
+      .header
+        .gosportals__title Государственные порталы
+        .clr
+      .slider
+        a(href="#").slider__item
+          img(src="%=static=%img/general/russia.png").slider__img
+          .slider__name Президент России
+        a(href="#").slider__item
+          img(src="%=static=%img/general/russia_yellow.png").slider__img
+          .slider__name Правительство РФ
+        a(href="#").slider__item
+          img(src="%=static=%img/general/russia_blue.png").slider__img
+          .slider__name Работа в России
+        a(href="#").slider__item
+          img(src="%=static=%img/general/gos-uslugi.png").slider__img
+        a(href="#").slider__item
+          img(src="%=static=%img/general/nacreeest.png").slider__img
+          .slider__name Национальный Реестр
+        a(href="#").slider__item
+          img(src="%=static=%img/general/open-region.png").slider__img
+          .slider__name Открытый Регион
+        a(href="#").slider__item
+          img(src="%=static=%img/general/yamao.png").slider__img
+          .slider__name ЯМАО
+        a(href="#").slider__item
+          img(src="%=static=%img/general/russia.png").slider__img
+          .slider__name Президент России
+
+
+
+block scripts
+  +scripts('%=static=%js/main%=hash=%%=min=%.js')
