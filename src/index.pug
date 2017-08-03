@@ -8,17 +8,7 @@ block keywords
   +keywords('registry, some, keywords')
 
 block css
-  // build:css vendor.min.css
-
-
-  // endbuild
-  // build:css main.min.css
   +styles('css/app.css')
-  +styles('css/font-awesome.min.css')
-  +styles('css/fonts.css')
-  +styles('css/slick-theme.min.css')
-  +styles('css/slick.min.css')
-  // endbuild
 
 block content
   .container
@@ -113,13 +103,7 @@ block content
 
 
 block scripts
-  //build:js vendor.min.js
-
-  // endbuild
-  //build:js main.min.js
-
   +scripts('js/libs.min.js')
   +scripts('js/scripts.js')
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   script(src="https://cdnjs.com/libraries/slick-carousel")
-  // endbuild
